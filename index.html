@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JQuery1</title>
+    <style>
+      p,
+      h1 {
+        color: green;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        /* Add "https://api.ipify.org?format=json" to 
+        get the IP Address of user*/
+        $(document).ready(()=>{
+            $.getJSON("https://api.ipify.org?format=json",
+            function (data) {
+ 
+                // Displayin IP address on screen
+                $("#hmmmm").html(data.ip);
+            })
+        });
+    </script>
+  </head>
+  <body>
+    <center>
+        <h1>hehehe</h1>
+        <h3>Public IP Address of user is:</h3>
+        <p id="hmmmm"></p>
+ 
+    </center>
+  </body>
+</html>
